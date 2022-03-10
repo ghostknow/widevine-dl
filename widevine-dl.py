@@ -71,7 +71,7 @@ def decrypt_content():
 	elif PLATFORM == "Linux":
 		MP4DECRYPT_PATH = "%s/mp4decrypt/mp4decrypt_linux"%FILE_DIRECTORY
 	else:
-		MP4DECRYPT_PATH = MP4DECRYPT_PATH = "mp4decrypt"
+		MP4DECRYPT_PATH = "./mp4decrypt"
 		
 	os.system('%s %s/encrypted_video.mp4 %s/decrypted_video.mp4 --key %s --show-progress'%(MP4DECRYPT_PATH,TEMPORARY_PATH,TEMPORARY_PATH,keys))
 	os.system('%s %s/encrypted_audio.m4a %s/decrypted_audio.m4a --key %s --show-progress'%(MP4DECRYPT_PATH,TEMPORARY_PATH,TEMPORARY_PATH,keys))
